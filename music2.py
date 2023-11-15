@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets
-from mydesign import Ui_MainWindow  # импорт нашего сгенерированного файла
+from mydesign import Ui_MainWindow
 import sys
 
 
@@ -8,6 +8,10 @@ class mywindow(QtWidgets.QMainWindow):
         super(mywindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        # Добавляем новые значения
+        self.ui.comboBox.addItem("Программист")
+        self.ui.comboBox.addItem("Дизайнер")
 
 
 app = QtWidgets.QApplication([])
