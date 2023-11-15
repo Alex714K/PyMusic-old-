@@ -1,0 +1,1 @@
+pyuic5 myplayer.ui -o myplayer.py
