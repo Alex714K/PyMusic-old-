@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>460</y>
-      <width>471</width>
+      <width>761</width>
       <height>80</height>
      </rect>
     </property>
@@ -27,7 +27,7 @@
      <item>
       <widget class="QPushButton" name="openVideo">
        <property name="text">
-        <string>Open Video</string>
+        <string>Open music</string>
        </property>
       </widget>
      </item>

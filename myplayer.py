@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 460, 471, 80))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 460, 761, 80))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -54,7 +54,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.openVideo.setText(_translate("MainWindow", "Open Video"))
+        self.openVideo.setText(_translate("MainWindow", "Open music"))
         self.playButton.setText(_translate("MainWindow", "Play"))
         self.options.setTitle(_translate("MainWindow", "Настройки"))
         self.playlist.setText(_translate("MainWindow", "Плейлисты"))

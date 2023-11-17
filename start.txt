@@ -1,0 +1,1 @@
+pyuic5 myplaylist.ui -o myplaylist.py
