@@ -1,4 +1,6 @@
+import sqlite3
 from PyQt5 import QtWidgets
+from PyQt5.QtSql import QSqlDatabase, QSqlTableModel
 from myplaylist import Ui_MainPlaylist
 from myplayer import Ui_MainWindow  # импорт нашего сгенерированного файла
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QHBoxLayout, QVBoxLayout, QLabel, \
@@ -18,8 +20,7 @@ class PlayList(QtWidgets.QMainWindow):
         self.init_ui()
 
     def init_ui(self):
-        pass
-
+        self.connection = sqlite3.connect("base.sqlite")
 
 class MyWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -29,6 +30,7 @@ class MyWindow(QtWidgets.QMainWindow):
         self.init_ui()
 
     def init_ui(self):
+
         self.mediaPlayer = QMediaPlayer(None, QMediaPlayer.VideoSurface)  # создаём проигрыватель
 
         self.playing = False
@@ -42,16 +44,16 @@ class MyWindow(QtWidgets.QMainWindow):
     def b(self):
         pass
 
-    def open_playlists(self):
+    def open_playlists(self):  # открыть окно с плейлистом
         self.application = PlayList()
         self.application.show()
 
-    def pause_music(self):
+    def pause_music(self):  # воспроизведение музыки
         if self.mediaPlayer.state() == QMediaPlayer.PlayingState:
-            self.mediaPlayer.pause()
+            self.mediaPlayer.pause()  # остановить
             self.ui.playButton.setText('Play')
         else:
-            self.mediaPlayer.play()
+            self.mediaPlayer.play()  # продолжить
             self.ui.playButton.setText('Stop')
 
     def open_file(self):
