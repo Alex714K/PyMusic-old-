@@ -1,4 +1,4 @@
-red=254
-blue=25
-green=255
+red=230
+green=230
+blue=230
 folder=
